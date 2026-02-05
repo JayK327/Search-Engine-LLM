@@ -34,9 +34,8 @@ Create a .env file:
 
 ```bash
 GROQ_API_KEY=your_groq_api_key_here
-HF_TOKEN=your_hunggingface_token
 ```
-Or You can also enter the GROQ Api key directly in the Streamlit sidebar when running the app.
+Or You can also enter the Api key directly in the Streamlit sidebar when running the app.
 
 ### 5. Running the App
 Create a .env file:
