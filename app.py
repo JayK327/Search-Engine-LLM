@@ -14,14 +14,14 @@ st.title("LangChain - Search Agent with Modern API")
 
 groq_api_key = st.sidebar.text_input("Enter your Groq API Key:", type="password", help="Your Groq API key here")
 
-# Ensure the model is configured
+# Ensure the model is configured correctly
 if not groq_api_key:
     st.warning("Enter Groq API Key in sidebar to start the agent.")
     st.stop()
 
 llm = ChatGroq(groq_api_key=groq_api_key, model_name="openai/gpt-oss-120b")
 
-# Define the search tool
+# Define the search tool 
 @tool
 def duckduckgo_search(query: str) -> str:
     """Search the web for the query and return a summary."""
@@ -93,4 +93,5 @@ if user_input:
             {"role": "assistant", "content": reply}
         )
         st.write(reply)
+
 
